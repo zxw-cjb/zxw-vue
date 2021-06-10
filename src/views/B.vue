@@ -1,10 +1,13 @@
 <template>
-  <div>我是HelloWorld组件</div>
+  <div>我是B组件</div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "B",
+  mounted() {
+    this.$bus.$emit("add");
+  },
 };
 </script>
 

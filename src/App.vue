@@ -1,28 +1,51 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <!-- <div class="box"></div>
+    <button class="btn" ref="btn" @click="handle">我是一个按钮</button> -->
+    <!-- <A ref="aaa" /> -->
+    <!-- <B ref="bbb" /> -->
+    <!-- <B ref="bbb" />
+    <A ref="aaa" /> -->
+    <Father />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import A from "./views/A";
+import B from "./views/B";
+import Father from "./views/father.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+  methods: {
+    // handle() {
+    //   this.$refs.btn.disabled = true;
+    // },
+  },
+  mounted() {
+    // document.getElementsByClassName("btn")[0].disabled = true;
+    // console.log(document.getElementsByClassName("btn")[0]);
+    // console.log(this.$refs.btn);
+    // console.log(this.$refs.aaa);
+    // this.$refs.aaa.add();
+    // console.log(this.$children);
+  },
+  updated() {
+    // console.log(document.getElementsByClassName("btn"));
+  },
   components: {
-    HelloWorld
-  }
-}
+    A,
+    B,
+    Father,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="less" scoped>
+.box {
+  width: 345px;
+  height: 150px;
+  margin: 15px;
+  background-color: red;
 }
 </style>
